@@ -1,4 +1,5 @@
-﻿using Desafio.API.AbstractModels;
+﻿using Desafio.API.Data;
+using Desafio.API.AbstractModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Desafio.API.Controllers
@@ -39,7 +40,9 @@ namespace Desafio.API.Controllers
         public async Task<IActionResult> Put (int id, TEntity product)
         {
             if (id != product.ID)
+            {
                 return BadRequest();
+            }
             await _data.Update(product);
             return NoContent();
         }

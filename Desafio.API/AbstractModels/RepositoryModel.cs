@@ -17,7 +17,7 @@ namespace Desafio.API.AbstractModels
         }
         public async Task<List<TEntity>> GetAll()
         {
-            return await _context.Set<TEntity>().ToListAsync();
+            return await _context.Set<TEntity>().OrderBy(i => i.Name).ToListAsync();
         }
 
         //Esse corpo permite erros no POST, por causa do id

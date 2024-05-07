@@ -7,7 +7,7 @@ namespace Desafio.API.Entities
     {
 
         public int ID { get; set; }
-        public string? Name { get; set; }
+        public string Name { get; set; }
         public Product(int ID, string? Name)
         {
             this.ID = ID;

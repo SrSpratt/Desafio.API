@@ -32,8 +32,6 @@ namespace Desafio.API
             //adiciona os repositórios (no caso, O repositório)
             builder.Services.AddScoped<Inventory>();
 
-            //adiciona as páginas razor
-            builder.Services.AddRazorPages();
 
             var app = builder.Build();
 
@@ -45,15 +43,15 @@ namespace Desafio.API
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-            //
+            
 
             app.UseHttpsRedirection();
+
 
             app.UseAuthorization();
 
             app.MapControllers();
 
-            app.MapRazorPages();
 
             app.Run();
         }
