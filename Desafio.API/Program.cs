@@ -1,5 +1,5 @@
 using Desafio.API.Data;
-using Desafio.API.Models;
+using Desafio.API.AbstractModels;
 using Desafio.API.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -32,6 +32,9 @@ namespace Desafio.API
             //adiciona os repositórios (no caso, O repositório)
             builder.Services.AddScoped<Inventory>();
 
+            //adiciona as páginas razor
+            builder.Services.AddRazorPages();
+
             var app = builder.Build();
 
 
@@ -49,6 +52,8 @@ namespace Desafio.API
             app.UseAuthorization();
 
             app.MapControllers();
+
+            app.MapRazorPages();
 
             app.Run();
         }

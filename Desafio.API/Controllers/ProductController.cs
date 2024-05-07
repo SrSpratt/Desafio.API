@@ -1,5 +1,5 @@
 ﻿using Desafio.API.Data;
-using Desafio.API.Models;
+using Desafio.API.AbstractModels;
 using Desafio.API.Entities;
 using Desafio.API.Repositories;
 using Microsoft.AspNetCore.Http;

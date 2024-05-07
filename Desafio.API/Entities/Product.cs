@@ -1,4 +1,4 @@
-﻿using Desafio.API.Models;
+﻿using Desafio.API.AbstractModels;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Desafio.API.Entities

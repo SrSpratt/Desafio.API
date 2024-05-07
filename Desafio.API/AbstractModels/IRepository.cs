@@ -1,6 +1,4 @@
-﻿using Desafio.API.Models;
-
-namespace Desafio.API.Data
+﻿namespace Desafio.API.AbstractModels
 {
     public interface IRepository<T> where T : class, IEntity
     {

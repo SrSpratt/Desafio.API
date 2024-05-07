@@ -1,4 +1,4 @@
-﻿namespace Desafio.API.Models
+﻿namespace Desafio.API.AbstractModels
 {
     public interface IEntity
     {
