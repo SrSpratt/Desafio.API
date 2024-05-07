@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Desafio.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240506213436_Initial")]
+    [Migration("20240507003733_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -33,7 +33,6 @@ namespace Desafio.API.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");

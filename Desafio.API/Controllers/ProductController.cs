@@ -1,29 +1,21 @@
-﻿using Desafio.API.Entities;
+﻿using Desafio.API.Data;
+using Desafio.API.Models;
+using Desafio.API.Entities;
+using Desafio.API.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
 namespace Desafio.API.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class ProductController : ControllerBase
+    public class ProductController : BaseController<Product, Inventory>
     {
-        [HttpGet]
-        public async Task<ActionResult<List<Product>>> GetProductList()
+        public ProductController(Inventory repository) : base(repository) 
         {
-            List<Product> list = new List< Product>();
-            Product product = new Product(
-               ID: 1,
-               Name: "Produto 1");
-            list.Add(product);
-            return Ok(list);
-        }
 
-        [HttpPost]
-        public ActionResult<Product> UpdateProduct([FromBody] Product product)
-        {
-            return Ok();
         }
 
     }
